@@ -1,0 +1,21 @@
+body {
+    background-color: #EEF1DA;
+    text-align: center;
+}
+
+img {
+    /* border: 20px solid #C7D9DD; */
+    background-color: #C7D9DD;
+    padding: 30px;
+    /* margin: 0; */
+    /* border-left: 50%;
+    border-right: 25%; */
+}
+
+.title {
+    color: black;
+    padding: 20px;
+    background-color: #C7D9DD;
+    margin: 0;
+}
+
