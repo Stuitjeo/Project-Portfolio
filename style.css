@@ -1,21 +1,106 @@
 body {
-    background-color: #EEF1DA;
-    text-align: center;
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 200px 200px;
+        gap: 30px;
+      }
+  
+      /* .first {
+        grid-column: span 2;
+      } */
+  
+      .card {
+        /* background-color: blue; */
+        background-color: #faf9f6;
+      }
+      
+      .first {
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+
+      
+    .main {
+        font-family: "Poppins", sans-serif;
+        margin: 50px 50px 0px 50px;
+        background-color: #faf9f6;
+        display: flex;
+        flex-direction: column;
+        min-height: 95vh;
+    }
+    /* .main {
+        flex: 1;
+    } */
+    
+    .logo {
+        border-radius: 50%;
+        width: 25%;
+        position: relative;
+        /* left: %; */
+    }
+    
+    h1 {
+        font-size: 5rem;
+    }
+    
+    footer {
+        text-align: right;
+        color: midnightblue;
+    }
+    
+    .tile-image {
+        height: 200px;
+        float: left;
+        margin-right: 50px;
+    }
+    
+    .card {
+        width: 45%;
+    }
+    
+    .left {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    
+    }
+    
+    .creative {
+        color: midnightblue;
+    }
 }
 
-img {
-    /* border: 20px solid #C7D9DD; */
-    background-color: #C7D9DD;
-    padding: 30px;
-    /* margin: 0; */
-    /* border-left: 50%;
-    border-right: 25%; */
-}
-
-.title {
-    color: black;
-    padding: 20px;
-    background-color: #C7D9DD;
-    margin: 0;
-}
-
+  
+  @media (max-width: 680px){
+    .logo {
+      width: 100px;
+      position: absolute;
+      margin-left: 50%;
+      margin-right: 50%;
+    }
+  
+    h1 {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+  
+    .card {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+  
+    .card img {
+      margin-bottom: 10px;
+      width: 100%;
+      display: inline;
+      object-fit: cover;
+    }
+  
+  }
+  
+  
