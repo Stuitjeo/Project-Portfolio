@@ -3,8 +3,8 @@ body {
     margin: 50px 50px 0px 50px;
     background-color: #faf9f6;
     display: flex;
+    min-height: 150vh;
     flex-direction: column;
-    min-height: 95vh;
 }
   
 .face {
@@ -26,28 +26,41 @@ footer {
 }
 
 .tile-image {
-    height: 200px;
+    height: 300px;
     float: left;
-    margin-right: 50px;
+    margin-right: 20px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    
 }
-
 .card {
-    width: 45%;
+  text-align: justify;
+  width: 49%;
 }
-
 .left {
     float: left;
+
 }
 
 .right {
     float: right;
 }
 
-.creative {
-    color: midnightblue;
-}
+@media (max-width: 1680px) {
+  .tile-image {
+    float: none;
+  }
+  .card img{
+    margin-bottom: 10px;
+    width: 100%;
+    object-fit: cover
+    
+  }
 
+  .card {
+    text-align: center;
+  }
+}
 
 @media (max-width: 680px){
   .face {
@@ -69,7 +82,7 @@ footer {
     width: 100%;
     display: block;
     margin-bottom: 20px;
-    text-align: justify;
+    /* text-align: justify; */
   }
 
   .card img {
