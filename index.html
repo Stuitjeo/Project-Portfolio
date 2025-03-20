@@ -19,10 +19,10 @@
   }
 
   .panel {
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 60vh;
     border-radius: 50px;
     overflow: hidden;
     color: aliceblue;
@@ -45,6 +45,7 @@
   .panel.active {
     flex: 6;
     /* border-radius: 25px; */
+
   }
   
   .panel.active h3 {
@@ -52,7 +53,7 @@
   }
 
   @media (max-width: 770px) {
-    .panel:nth-of-type(2), .panel:nth-of-type(5) {
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
       display: none;
     }
   }
@@ -85,13 +86,13 @@
         <div class="panel" style="background-image: url('assets/images/Blackbox1.png')">
           <h3>Aircraft Blackbox - Kea Aerospace</h3>
         </div>
-        <div class="panel" style="background-image: url('assets/images/break_board.jpg')">
-          <h3>Explore the world</h3>
-        </div>
-        <div class="panel" style="background-image: url('assets/images/Link.png')">
+        <div class="panel" style="background-image: url('assets/images/link.jpg')">
           <h3>Explore the world</h3>
         </div>
         <div class="panel" style="background-image: url('assets/images/homemade_datalogger.png')">
+          <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('assets/images/break_board.jpg')">
           <h3>Explore the world</h3>
         </div>
         <div class="panel" style="background-image: url('assets/images/tvc.jpg')">
