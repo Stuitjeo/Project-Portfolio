@@ -4,63 +4,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agency</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <style>
+  .feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+  }
+
+  .my-container {
+    display: flex;
+  }
+
+  .panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    border-radius: 50px;
+    overflow: hidden;
+    color: aliceblue;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+  }
+
+  .panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+
+  .panel.active {
+    flex: 6;
+    /* border-radius: 25px; */
+  }
+  
+  .panel.active h3 {
+    opacity: 1;
+  }
+
+  @media (max-width: 770px) {
+    .panel:nth-of-type(2), .panel:nth-of-type(5) {
+      display: none;
+    }
+  }
+
+
+  </style>
+
 </head>
 
 <body>
-  <div class="main">
-    <div class="face">
-      <img class="logo" src="./assets/images/myself.jpg" alt="logo">
+  <!-- main title -->
+  <section id="title">
+    <div class="container">
+      <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4 myself" src="assets/images/myself.jpg" alt="picture of oliver stuitje" width="200" height="200" class="rounded-circle">
+        <h1 class="display-5 fw-bold text-body-emphasis">Oliver Stuitje</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          </div>
+        </div>
+      </div>    
     </div>
-    
-    
-    <div>
+  </section>
 
-      <div class="left card">
-        <h2>Aircraft blackbox</h2>
-        <img class="tile-image" src="./assets/images/Blackbox1.png" alt="hand and flower in water">
-        <!-- <h2 class="card-title">Blackbox Datalogger</h2> -->
-        <p class="card-text">
-          <ul>
-            <li> UART, RS232, RS485, CANbus, I2C, SPI</li>
-            <li>ECAD proficiency: Altium, Cadence, KiCAD</li>
-            <li>MCAD proficiency: Solidworks, OnShape</li>
-          </ul>
-          
-        
-        
-        </p>
+  <!-- expanding cards -->
+  <section id="expandable-cards">
+    <div class="container">
+      <div class="my-container">
+        <div class="panel" style="background-image: url('assets/images/Blackbox1.png')">
+          <h3>Aircraft Blackbox - Kea Aerospace</h3>
+        </div>
+        <div class="panel" style="background-image: url('assets/images/break_board.jpg')">
+          <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('assets/images/Link.png')">
+          <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('assets/images/homemade_datalogger.png')">
+          <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('assets/images/tvc.jpg')">
+          <h3>Explore the world</h3>
+        </div>
       </div>
-      
-      <div class="right card">
-        <h2>Breakout board</h2>
-        <img class="tile-image" src="./assets/images/breakoutboard.jpg" alt="metal structure">
-        <!-- <h2 class="card-title">Construction</h2> -->
-        <p class="card-text">Breakout board for interfacing with varying types of Li-ion batteries with different amounts of cells</p>
-      </div>
-
-      
-
-      
-
-
-
     </div>
-    
+  </section>
 
-      
-
-
-    
-
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./download.svg" alt="moveit brand icon" height="30"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./linkedin.svg" alt="moveit brand icon" height="30"></a></li>
+        <!-- <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li> -->
+      </ul>
+    </footer>
   </div>
-  <footer>
-    <p>Create. Develop. Design.</p>
-  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="expanding-script.js"></script>
+
 </body>
 
 </html>
