@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Components</title>
+  <title>Oliver Stuitje's project portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <style>
@@ -43,7 +43,7 @@
   }
 
   .panel.active {
-    flex: 4;
+    flex: 5;
     /* border-radius: 25px; */
 
   }
@@ -51,6 +51,42 @@
   .panel.active h3 {
     opacity: 1;
   }
+
+  .myself {
+    border-radius: 50%;
+  }
+
+  .my-description {
+    font-size: 25px;
+  }
+
+  .my-footer {
+    font-size: 25px;
+  }
+
+  /* Description container */
+  .description-container {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            /* width: 100%; */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .description-header {
+            font-size: 45px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .description-text {
+            font-size: 25px;
+            color: #666;
+        }
 
   @media (max-width: 770px) {
     .panel:nth-of-type(4), .panel:nth-of-type(5) {
@@ -60,6 +96,8 @@
     .panel {
       height: 40vh;
     }
+
+
   }
 
 
@@ -75,7 +113,7 @@
         <img class="d-block mx-auto mb-4 myself" src="assets/images/myself.jpg" alt="picture of oliver stuitje" width="200" height="200" class="rounded-circle">
         <h1 class="display-5 fw-bold text-body-emphasis">Oliver Stuitje</h1>
         <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <p class="lead mb-4 my-description">Eager to learn, I design, I create, I innovate</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
           </div>
         </div>
@@ -83,49 +121,80 @@
     </div>
   </section>
 
+  <div class="container">
+    <h2>My experience</h2>
+  </div>
+
   <!-- expanding cards -->
   <section id="expandable-cards">
     <div class="container">
       <div class="my-container">
-        <div class="panel" style="background-image: url('assets/images/Blackbox1.png')">
-          <h3>Aircraft Blackbox - Kea Aerospace</h3>
+        <div class="panel active" style="background-image: url('assets/images/Blackbox1.png')" onclick="updateDescription('Aircraft Blackbox', 'A sophisticated black box designed for aircraft developed during my time with Kea Aerospace')">>
         </div>
-        <div class="panel" style="background-image: url('assets/images/link.jpg')">
-          <h3>Explore the world</h3>
+        <div class="panel" style="background-image: url('assets/images/link.jpg')" onclick="updateDescription('Engine Simulator', 'A high-tech simulator used to test and analyze car manufacturer ECUs')">
         </div>
-        <div class="panel" style="background-image: url('assets/images/homemade_datalogger.png')">
-          <h3>Explore the world</h3>
+        <div class="panel" style="background-image: url('assets/images/homemade_datalogger.png')" onclick="updateDescription('Lower Power Datalogger', 'A custom-built data recording device used for collecting and storing experimental data. Interfaces with I2C, SPI, and UART')">
         </div>
-        <div class="panel" style="background-image: url('assets/images/break_board.jpg')">
-          <h3>Explore the world</h3>
+        <div class="panel" style="background-image: url('assets/images/break_board.jpg')" onclick="updateDescription('Breakout Board', 'A circuit board designed to make interfacing with different li-ion batteries easier and more manageable.')">
         </div>
-        <div class="panel" style="background-image: url('assets/images/TVC.jpg')">
-          <h3>Explore the world</h3>
+        <div class="panel" style="background-image: url('assets/images/tvc.jpg')" onclick="updateDescription('Thrust Vector Control', 'Designed using a combination of 3D printed and off the shelf parts, This is an advanced rocket control system that allows for real-time precise flight maneuvering.')">
         </div>
       </div>
     </div>
   </section>
-
+  <!-- Description box -->
+   <div class="container">
+    <div class="description-container">
+      <div id="description-header" class="description-header">Aircraft Blackbox</div>
+      <div id="description-text" class="description-text">A sophisticated black box designed for aircraft developed during my time with Kea Aerospace</div>
+    </div>
+   </div>
+  
+  
+  <!-- footer -->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
         </a>
-        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+        <span class="mb-3 mb-md-0 text-body-secondary my-footer">Oliver Stuitje</span>
       </div>
   
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./download.svg" alt="moveit brand icon" height="30"></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./linkedin.svg" alt="moveit brand icon" height="30"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="./assets/documents/Oliver_S_CV_2025.pdf"><img src="./filetype-pdf.svg" alt="moveit brand icon" height="60"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/oliver-stuitje-131830264/"><img src="./linkedin.svg" alt="moveit brand icon" height="60"></a></li>
         <!-- <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li> -->
       </ul>
     </footer>
   </div>
 
   
+
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="expanding-script.js"></script>
+
+  <script>
+    function updateDescription(title, text) {
+        const header = document.getElementById('description-header');
+        const description = document.getElementById('description-text');
+
+        // Fade out effect before updating
+        header.style.opacity = 0;
+        description.style.opacity = 0;
+
+        setTimeout(() => {
+            header.textContent = title;
+            description.textContent = text;
+
+            // Fade in effect after updating
+            header.style.opacity = 1;
+            description.style.opacity = 1;
+        }, 200);
+    }
+</script>
 
 </body>
 
 </html>
+
